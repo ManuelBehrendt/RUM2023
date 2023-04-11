@@ -1,0 +1,10 @@
+.jupyter
+.ipynb_checkpoints
+.gitignore.swp
+.DS_Store
+output_00300/
+prep_data/
+todo.rtf
+output_00300.jld2
+output_00300.zip
+simulation_files.zip
