@@ -29,6 +29,7 @@ into the notebook/script folder of the course (../RUM2023/>).
 Execute the Julia file **install_packages.jl**. It uses the prepared environment for this folder and installs all necessary packages with the versions that are needed for this course:
 - julia install_packages.jl  (from command line within course folder)
 - or in the Julia REPL: include("install_packages.jl")
+
 A similar list should appear on the screen at the end:
 ```
 ...
