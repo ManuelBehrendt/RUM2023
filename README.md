@@ -1,8 +1,8 @@
 # Instructions - MERA Hands-On Session - RUM2023, Oxford
 Manuel Behrendt
 
-`Note: The course and simulation files will be distributed on USB sticks at the conference (download options, see below). Julia and the needed packages should be installed beforehand. We recommend using JupyterLab or VScode.`
-
+> **Note**
+> The course and simulation files will be distributed on USB sticks at the conference (download options, see below). Julia and the needed packages should be installed beforehand. We recommend using JupyterLab or VScode.
 
 ## 1. Install Julia 1.6.x
 on your system: https://julialang.org/downloads/#long_term_support_release
