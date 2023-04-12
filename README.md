@@ -1,7 +1,7 @@
 # Instructions - MERA Hands-On Session - RUM2023, Oxford
 Manuel Behrendt
 
-`Note: The course and simulation files will be distributed on USB sticks at the conference. Julia and the needed packages should be installed beforehand. We recommend using JupyterLab or VScode.`
+`Note: The course and simulation files will be distributed on USB sticks at the conference (download options, see below). Julia and the needed packages should be installed beforehand. We recommend using JupyterLab or VScode.`
 
 
 ## 1. Install Julia 1.6.x
@@ -20,17 +20,18 @@ from git repository:
 
 ## 3. Download simulation files 
 into the notebook/script folder of the course.
-- Source 1: ...
+- Source 1: https://datashare.mpcdf.mpg.de/s/r19OAmUIfjjt2je
 - Source 2: Zenodo (upcomming)
 
 >unzip output_00300.zip
 
 ## 4. Install Julia packages
-Execute the Julia file **installation.jl**. It uses the prepared environment for this folder and installs all necessary packages with the versions that are needed for this course:
-- julia installation.jl  (from command line within course folder)
-- or in the Julia REPL: include("installation.jl")
-A similar list should appear on the screen:
+Execute the Julia file **install_packages.jl**. It uses the prepared environment for this folder and installs all necessary packages with the versions that are needed for this course:
+- julia install_packages.jl  (from command line within course folder)
+- or in the Julia REPL: include("install_packages.jl")
+A similar list should appear on the screen at the end:
 ```
+...
 Status `~/Documents/codes/github/RUM2023/Project.toml`
   [35d6a980] ColorSchemes v3.20.0
   [7073ff75] IJulia v1.24.0
@@ -49,3 +50,5 @@ Status `~/Documents/codes/github/RUM2023/Project.toml`
 >import Pkg; Pkg.build("IJulia")
 
 - Find additional information about MERA in the documentation (v1.2): https://manuelbehrendt.github.io/Mera.jl/stable/ 
+
+- Further information for VScode users: https://code.visualstudio.com/docs/languages/julia
