@@ -19,7 +19,7 @@ from git repository:
 >git clone https://github.com/ManuelBehrendt/RUM2023.git
 
 ## 3. Download simulation files 
-into the notebook/script folder of the course.
+into the notebook/script folder of the course (../RUM2023/>).
 - Source 1: https://datashare.mpcdf.mpg.de/s/r19OAmUIfjjt2je
 - Source 2: Zenodo (upcomming)
 
