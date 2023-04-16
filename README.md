@@ -38,7 +38,7 @@ Status `~/Documents/codes/github/RUM2023/Project.toml`
   [35d6a980] ColorSchemes v3.20.0
   [7073ff75] IJulia v1.24.0
   [a93385a2] JuliaDB v0.13.0
-  [02f895e8] Mera v1.2.0
+  [02f895e8] Mera v1.3.0
   [438e738f] PyCall v1.92.3 ⚲
   [d330b81b] PyPlot v2.11.1
   [2913bbd2] StatsBase v0.32.2
