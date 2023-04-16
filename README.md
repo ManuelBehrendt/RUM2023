@@ -48,7 +48,7 @@ Status `~/Documents/codes/github/RUM2023/Project.toml`
 ```
 
 ## 5. Start Course
-- Open the Julia REPL within the course folder and execute step by step the code from the script (copy/paste),
+- Open the Julia REPL within the course folder and execute step by step the code from the script _Mera_course_script.jl_ (copy/paste),
 - or open the ipynb-file with Jupyter notebook/lab  (alternatively in Visual Studio Code); the Julia 1.6.x Kernel should be available. We recommend the standalone App JupyterLab-Desktop: https://github.com/jupyterlab/jupyterlab-desktop
 - If you have a working Jupyter installation, it should detect the Jupyter Julia kernel; if not, you may execute: 
 >import Pkg; Pkg.build("IJulia")
