@@ -1,7 +1,8 @@
 # Julia environment for reproducability
 # The first time of execution, it installs all necessary packages
 # Project environment for reproducability is automatically loaded
-# import Pkg; Pkg.instantiate() # install all necessary packages with necessary versions (first time)
+import Pkg; Pkg.activate(".") # to be on the safe side with environment
+Pkg.instantiate() # install all necessary packages with necessary versions (first time)
 Pkg.status() # list of installed packages
 
 
@@ -120,6 +121,7 @@ to
 pg  = projection(gas, :sd, :Msun_pc2, center=[:boxcenter], verbose=false);
 pgx = projection(gas, :sd, :Msun_pc2, center=[:boxcenter], direction=:x, verbose=false);
 pgy = projection(gas, :sd, :Msun_pc2, center=[:boxcenter], direction=:y, verbose=false);
+bell() # notification sound
 
 propertynames(pg)
 
@@ -152,19 +154,23 @@ subplot(2,2,3)
 
 tight_layout()
 
+
 # project for different resolutions
 # here, lmax is not limited to the maximum resolution of the simulation.
 # lmax
 pg  = projection(gas, :sd, :Msun_pc2, center=[:boxcenter], lmax=5);
 imshow(log10.(pg.maps[:sd]'), origin="lower", extent=pg.cextent, cmap="magma")
 
+
 # effective resolution (related to the boxsize)
 pg  = projection(gas, :sd, :Msun_pc2, center=[:boxcenter], res=100);
 imshow(log10.(pg.maps[:sd]'), origin="lower", extent=pg.cextent, cmap="magma")
 
+
 # pixel-size (related to a physicel size)
 pg  = projection(gas, :sd, :Msun_pc2, center=[:boxcenter], pxsize=[100., :pc]);
 imshow(log10.(pg.maps[:sd]'), origin="lower", extent=pg.cextent, cmap="magma")
+
 
 
 
@@ -201,6 +207,7 @@ subplot(2,2,3)
     ylabel("z [kpc]")
 
 tight_layout()
+
 
 msum(gas_M, :Msun) # gas mass of the "M" region
 
@@ -333,6 +340,7 @@ subplot(3,4,12)
 
 tight_layout()
 
+
 # calculate gas and particle mass within the regions
 massg_M = msum(gas_M, :Msun)
 massg_E = msum(gas_E, :Msun)
@@ -379,6 +387,7 @@ yscale("log")
 xlabel("log10(Σ) [Msun_pc2]")
 ylabel("counts")
 
+
 # prepare data:
 # =============
 
@@ -424,6 +433,7 @@ tight_layout()
 
 
 
+
 getvar()
 
 
@@ -448,6 +458,7 @@ colorbar(label="log10(mass/pixel) [Msun]")
 xlabel("log10(nH/cm^3)")
 ylabel("log10(T/K)");
 
+
 # select the cold gas
 mask_density = getvar(gas, :rho, :nH) .> 1e-2 # cm-3
 mask_Temp    = getvar(gas, :T, :K) .< 5e2 # K
@@ -459,6 +470,7 @@ msum(gas, :Msun, mask=mask_tot) # total mass of the masked/selected region
 psd_cold = projection(gas, :sd, :Msun_pc2, mask=mask_tot, verbose=false);
 imshow(log10.(psd_cold.maps[:sd])', origin="lower", cmap=cmap2 )
 axis("off")
+
 
 # load data only one time
 nH = getvar(gas, :rho, :nH)  
@@ -477,6 +489,11 @@ mask_tot = mask_density_h .* mask_density_l .* mask_Temp_h .* mask_Temp_l;
 psd_warm = projection(gas, :sd, :Msun_pc2, mask=mask_tot, verbose=false);
 imshow(log10.(psd_warm.maps[:sd])', origin="lower", cmap=cmap2 )
 axis("off");
+
+
+
+
+
 
 
 
