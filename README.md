@@ -9,6 +9,8 @@ on your system: https://julialang.org/downloads/#long_term_support_release
 
 - Note: Apple Silicon M1/M2 should work with the macOS 64bit version
 
+- Platform Specific Instructions for Official Binaries https://julialang.org/downloads/platform/
+
 - Alternatively use the Julia version manager and make Julia 1.6.x the default: https://github.com/JuliaLang/juliaup
 
 - Further information: https://docs.julialang.org/en/v1.6/
